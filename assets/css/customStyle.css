@@ -1,0 +1,272 @@
+.top-container {
+    background-color: #f1f1f1;
+    padding: 30px;
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    background: #8f0c2c;
+    width: 100%;
+    -webkit-box-shadow: 0 0px 13px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0px 13px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0px 13px 7px rgba(0, 0, 0, 0.3);
+
+}
+
+.header {
+    background: #8f0c2c;
+    color: #f1f1f1;
+    position: relative;
+
+}
+
+.navHeader {
+    width: 73%;
+    margin: 0 auto;
+}
+
+.navHeader a {
+    font-size: 18px;
+    font-family: "MuseoSans-500", sans-serif;
+}
+
+.headername {
+    padding: 2px 35px;
+}
+
+.headerIcons {
+    margin-right: 0;
+    padding: 2px 15px;
+}
+
+.headerIcons a {
+    color: white;
+}
+
+.headername a {
+    color: white;
+}
+
+.maticon {
+    float: right;
+    margin-left: 15px;
+    border-radius: 50%;
+}
+
+.headeruser {
+    background-color: #fff !important;
+    width: 32px;
+    height: 32px;
+    margin-left: 25px;
+}
+
+.headeruser .material-icons {
+    color: #8f0c2c;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-left: 5px;
+
+}
+
+ul {
+    list-style-type: none;
+    padding-right: 25px
+}
+
+ul li {
+    display: block;
+    float: right;
+    margin: 0 9px;
+}
+
+.nav {
+    text-align: center;
+    color: #fff;
+    height: 25px;
+}
+
+.navbar a {
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 6px 0px;
+    text-decoration: none;
+    opacity: .7;
+    font-family: 'Geogrotesque-Regular';
+    text-transform: uppercase;
+}
+
+.navbar .active a {
+    opacity: 1;
+}
+
+.content {
+    padding: 1px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-box-shadow: 0 0px 13px 7px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0px 13px 7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0px 13px 7px rgba(0, 0, 0, 0.3);
+}
+
+.sticky+.content {
+    padding-top: 102px;
+}
+
+section {
+    padding: 50px 25px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.searchOpt {
+    padding: 10px 0 !important;
+    top: 26px;
+    width: 100% !important;
+    background-color: transparent !important;
+}
+
+div.left {
+    font-family: Geogrotesque-Regular;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.collapsible-header {
+    border-bottom: none !important;
+    padding: none !important;
+}
+
+.datadiv {
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0px 13px -1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0px 13px -1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0px 13px -1px rgba(0, 0, 0, 0.3);
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:after {
+    background-color: #8f0c2c !important;
+}
+
+[type="radio"]:checked+span:after,
+[type="radio"].with-gap:checked+span:before,
+[type="radio"].with-gap:checked+span:after {
+    border: 2px solid #8f0c2c !important;
+}
+
+label {
+    padding: 20px;
+}
+
+[type="radio"]:not(:checked)+label,
+[type="radio"]:checked+label {
+    height: 30px;
+    font-size: 13px !important;
+}
+
+input:not([type]),
+input[type=text]:not(.browser-default) {
+    height: 2rem !important;
+    width: 80% !important;
+}
+
+.btn,
+.btn-large,
+.btn-small {
+
+    background-color: #8f0c2c !important;
+    padding: 0 28.50px !important;
+
+}
+
+h2 {
+    text-transform: uppercase;
+    color: #222;
+    font-family: 'Geogrotesque-Medium';
+    font-size: 1.5em;
+}
+
+.center {
+    margin: 0;
+}
+
+[type="radio"]:not(:checked)+span,
+[type="radio"]:checked+span {
+    font-size: small !important;
+    color: #787882 !important;
+}
+
+#mapid {
+    height: 1000px;
+    overflow: hidden;
+}
+
+.leaflet-container {
+    background: none !important;
+}
+
+.topassets {
+    float: right;
+    width: 41px;
+    height: 41px;
+    line-height: 41px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    background-color: #8f0c2c;
+    color: #fff;
+}
+
+.p {
+    margin: 0px;
+    width: 85%;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+label .waves-effect {
+    position: inherit !important;
+}
+
+.progress {
+    width: 88% !important;
+    float: right;
+    background-color: transparent !important;
+    margin: 12px 0px;
+    height: 5px;
+}
+
+.leftSection {
+    width: 41.6666666667%;
+    margin: 20px;
+}
+
+.rightSection {
+    width: 58.3333333333%;
+    margin: 20px;
+}
+
+
+@media only screen and (max-width: 635px) {
+    .datadiv {
+        width: 100% !important;
+    }
+
+    .leftSection {
+        width: 100% !important;
+    }
+
+    .rightSection {
+        width: 100% !important;
+    }
+}
