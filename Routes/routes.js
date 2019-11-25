@@ -11,10 +11,16 @@ app.config([
   ) {
     $urlMatcherFactoryProvider.caseInsensitive(true);
 
-    $stateProvider.state("workqueueDashboard", {
+    $stateProvider
+    .state("workqueueDashboard", {
       url: "/workqueueDashboard",
       templateUrl: "Templates/workqueueDashboard.html",
       controller: "workqueueDashboardCtrl"
+    })
+    .state("menuSelling", {
+      url: "/menuSelling",
+      templateUrl: "Templates/menuSelling.html",
+      controller:"menuSellingCtrl"
     });
 
     $urlRouterProvider.otherwise("/workqueueDashboard");

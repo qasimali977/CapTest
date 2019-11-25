@@ -1,229 +1,222 @@
-<div>
-    <section>
-        <div class="searchOpt collapsible-header ">
-            <div>
-                <div class="left">Search Options</div>
-            </div>
-        </div>
-        <div class="datadiv">
-            <form>
-                <div layout="row" layout-xs="column" class="radiobox">
-                    <div style="margin-top: 20px;">
-                        <label class="lables">
-                            <input class="with-gap" name="group1" type="radio" />
-                            <span>Last Three Months</span>
-                        </label>
-                    </div>
-                    <div style="margin-top: 20px;">
-                        <label>
-                            <input class="with-gap" name="group1" type="radio" />
-                            <span>Last Six Months</span>
-                        </label>
-                    </div>
-                    <div style="margin-top: 20px;">
-                        <label>
-                            <input class="with-gap" name="group1" type="radio" />
-                            <span>Last</span>
-                        </label>
-                    </div>
-                    <div>
-                        <label style="padding: 10px !important;">
-                            <b><span style="color: #8f0c2c;">Days</span></b>
-                            <input type="text" class="inputField" name="days" ng-model="searchObj.days">
-                        </label>
-                    </div>
-                    <div style="margin: 20px;">
-                        <label>
-                            <a class="waves-effect waves-light btn">Refresh WQ</a>
-                        </label>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-        <div layout="row" layout-xs="column" style="width: 100%;">
-            <div class="leftSection">
-                <div class="container datadiv" style="width: 100%;">
-                    <div style="text-align: center; padding: 15px 25px; font-size: 22.5px;">
-                        APPLICATION STATUS
-                    </div>
-                    <div style="cursor: pointer; padding: 0px 15px;">
-                        <div layout="row">
-                            <div class="col-md-6" style="width: 40%;">In Process</div>
-                            <div class="col-md-6" style="width: 60%;">
-                                <span class="ng-binding">9</span>
-                                <div class="progress">
-                                    <div class="determinate progress-bar" ng-style="{'background-color':'rgb(235, 255, 105)'
-                                        ,'width':((statusObj.STATUS_COUNT/wqAppSum)*100)+'%'}"
-                                        style="background-color: rgb(225, 180, 255); width: 27.2727%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="cursor: pointer; padding: 5px 15px;">
-                        <div layout="row">
-                            <div class="col-md-6" style="width: 40%;">New</div>
-                            <div class="col-md-6" style="width: 60%;">
-                                <span class="ng-binding">8</span>
-                                <div class="progress">
-                                    <div class="determinate progress-bar" ng-style="{'background-color':'rgb(235, 255, 105)'
-                                            ,'width':((statusObj.STATUS_COUNT/wqAppSum)*100)+'%'}"
-                                        style="background-color: rgb(165, 225, 180); width: 24.2424%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="cursor: pointer; padding: 5px 15px;">
-                        <div layout="row">
-                            <div class="col-md-6" style="width: 40%;">Addition Inform</div>
-                            <div class="col-md-6" style="width: 60%;">
-                                <span class="ng-binding">8</span>
-                                <div class="progress">
-                                    <div class="determinate progress-bar" ng-style="{'background-color':'rgb(235, 255, 105)'
-                                            ,'width':((statusObj.STATUS_COUNT/wqAppSum)*100)+'%'}"
-                                        style="background-color: rgb(165, 225, 180); width: 24.2424%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="cursor: pointer; padding: 5px 15px;">
-                        <div layout="row">
-                            <div class="col-md-6" style="width: 40%;">Recommend-Approve</div>
-                            <div class="col-md-6" style="width: 60%;">
-                                <span class="ng-binding">4</span>
-                                <div class="progress">
-                                    <div class="determinate progress-bar" ng-style="{'background-color':'rgb(235, 255, 105)'
-                                            ,'width':((statusObj.STATUS_COUNT/wqAppSum)*100)+'%'}"
-                                        style="background-color: rgb(175, 255, 180); width: 12.1212%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="cursor: pointer; padding: 5px 15px;">
-                        <div layout="row">
-                            <div class="col-md-6" style="width: 40%;">Approved</div>
-                            <div class="col-md-6" style="width: 60%;">
-                                <span class="ng-binding">2</span>
-                                <div class="progress">
-                                    <div class="determinate progress-bar" ng-style="{'background-color':'rgb(235, 255, 105)'
-                                            ,'width':((statusObj.STATUS_COUNT/wqAppSum)*100)+'%'}"
-                                        style="background-color: rgb(210, 255, 170); width: 6.06061%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="cursor: pointer; padding: 5px 15px;">
-                        <div layout="row">
-                            <div class="col-md-6" style="width: 40%;">Recommend-Reject</div>
-                            <div class="col-md-6" style="width: 60%;">
-                                <span class="ng-binding">1</span>
-                                <div class="progress">
-                                    <div class="determinate progress-bar" ng-style="{'background-color':'rgb(235, 255, 105)'
-                                            ,'width':((statusObj.STATUS_COUNT/wqAppSum)*100)+'%'}"
-                                        style="background-color: rgb(245, 95, 130); width: 3.0303%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="cursor: pointer; padding: 5px 15px;">
-                        <div layout="row">
-                            <div class="col-md-6" style="width: 40%;">Pending</div>
-                            <div class="col-md-6" style="width: 60%;">
-                                <span class="ng-binding">1</span>
-                                <div class="progress">
-                                    <div class="determinate progress-bar" ng-style="{'background-color':'rgb(235, 255, 105)'
-                                            ,'width':((statusObj.STATUS_COUNT/wqAppSum)*100)+'%'}"
-                                        style="background-color: rgb(235, 255, 105); width: 3.0303%;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="container datadiv" style="width:100%; margin-top: 20px;">
-                    <div class="col-md-12" style="text-align: center; padding: 15px 25px; font-size: 22.5px;">
-                        <span> TOP SELLING ASSETS
-                        </span>
-                    </div>
-                    <div class="col-md-12" style="padding:0 20px;">
-                        <div layout="row">
-                            <p style="width: 93%;">E260L Sedan</p>
-                            <div class="topassets">8</div>
-                        </div>
-                    </div>
-                    <div class="col-md-12" style="padding:0 20px;">
-                        <div layout="row">
-                            <p style="width: 93%;">1.5乐尚手动版（两厢）</p>
-                            <div class="topassets">5</div>
-                        </div>
-                    </div>
-                    <div class="col-md-12" style="padding:0 20px;">
-                        <div layout="row">
-                            <p style="width: 93%;">2.0T时尚版</p>
-                            <div class="topassets">5</div>
-                        </div>
-                    </div>
-                    <div class="col-md-12" style="padding:0 20px;">
-                        <div layout="row">
-                            <p style="width: 93%;">1.3乐尚手动版（两厢）</p>
-                            <div class="topassets">4</div>
-                        </div>
-                    </div>
-                    <div class="col-md-12" style="padding:0 20px;">
-                        <div layout="row">
-                            <p style="width: 93%;">2.0T豪华版</p>
-                            <div class="topassets">3</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="container datadiv" style="width:100%; margin-top: 20px;">
-                    <div class="col-md-12" style="text-align: center; padding: 15px 25px; font-size: 22.5px;">
-                        <span> TOP FINANCIAL PRODUCT
-                        </span>
-                    </div>
-                    <div class="col-md-12" style="padding:0 20px;">
-                        <div layout="row">
-                            <p style="width: 93%;">2017_5050_无补贴_12M</p>
-                            <div class="topassets">5</div>
-                        </div>
-                    </div>
-                    <div class="col-md-12" style="padding:0 20px;">
-                        <div layout="row">
-                            <p style="width: 93%;">BAIC_5050_有补贴（6%）_12M_个人</p>
-                            <div class="topassets">5</div>
-                        </div>
-
-                    </div>
-                    <div style="padding:0 20px;">
-                        <div layout="row">
-                            <p style="width: 93%;">E系列（贴息-个人）</p>
-                            <div class="topassets">5</div>
-                        </div>
-                    </div>
-                    <div style="padding:0 20px;">
-                        <div layout="row">
-                            <p style="width: 93%;">BBAC_2016_鹏龙行_5050_12M_个人</p>
-                            <div class="topassets">5</div>
-                        </div>
-                    </div>
-                    <div style="padding:0 20px;">
-                        <div layout="row">
-                            <p style="width: 93%;">BBAC_2016_鹏龙行_标准贷款_12-60M_个人</p>
-                            <div class="topassets">5</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="rightSection">
-                <div class="datadiv">
-                    <!--The div element for the map -->
-                    <div id="mapid"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="searchOpt collapsible-header ">
+    <div>
+        <div class="left">Search Options</div>
+    </div>
 </div>
-<footer>
+<div class="datadiv">
+    <form>
+        <div layout="row" layout-xs="column" class="radiobox">
+            <div style="margin-top: 20px;">
+                <label class="lables">
+                    <input class="with-gap" name="group1" type="radio" />
+                    <span>Last Three Months</span>
+                </label>
+            </div>
+            <div style="margin-top: 20px;">
+                <label>
+                    <input class="with-gap" name="group1" type="radio" />
+                    <span>Last Six Months</span>
+                </label>
+            </div>
+            <div style="margin-top: 20px;">
+                <label>
+                    <input class="with-gap" name="group1" type="radio" />
+                    <span>Last</span>
+                </label>
+            </div>
+            <div>
+                <label style="padding: 10px !important;">
+                    <b><span style="color: #8f0c2c;">Days</span></b>
+                    <input type="text" class="inputField" name="days" ng-model="searchObj.days">
+                </label>
+            </div>
+            <div style="margin: 20px;">
+                <label>
+                    <a class="waves-effect waves-light btn">Refresh WQ</a>
+                </label>
+            </div>
+        </div>
+    </form>
+</div>
 
-</footer>
+<div layout="row" layout-xs="column" style="width: 100%;">
+    <div class="leftSection">
+        <div class="container datadiv" style="width: 100%;">
+            <div style="text-align: center; padding: 15px 25px; font-size: 22.5px;">
+                APPLICATION STATUS
+            </div>
+            <div style="cursor: pointer; padding: 0px 15px;">
+                <div layout="row">
+                    <div class="col-md-6" style="width: 40%;">In Process</div>
+                    <div class="col-md-6" style="width: 60%;">
+                        <span class="ng-binding">9</span>
+                        <div class="progress">
+                            <div class="determinate progress-bar" ng-style="{'background-color':'rgb(235, 255, 105)'
+                                        ,'width':((statusObj.STATUS_COUNT/wqAppSum)*100)+'%'}"
+                                style="background-color: rgb(225, 180, 255); width: 27.2727%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="cursor: pointer; padding: 5px 15px;">
+                <div layout="row">
+                    <div class="col-md-6" style="width: 40%;">New</div>
+                    <div class="col-md-6" style="width: 60%;">
+                        <span class="ng-binding">8</span>
+                        <div class="progress">
+                            <div class="determinate progress-bar" ng-style="{'background-color':'rgb(235, 255, 105)'
+                                            ,'width':((statusObj.STATUS_COUNT/wqAppSum)*100)+'%'}"
+                                style="background-color: rgb(165, 225, 180); width: 24.2424%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="cursor: pointer; padding: 5px 15px;">
+                <div layout="row">
+                    <div class="col-md-6" style="width: 40%;">Addition Inform</div>
+                    <div class="col-md-6" style="width: 60%;">
+                        <span class="ng-binding">8</span>
+                        <div class="progress">
+                            <div class="determinate progress-bar" ng-style="{'background-color':'rgb(235, 255, 105)'
+                                            ,'width':((statusObj.STATUS_COUNT/wqAppSum)*100)+'%'}"
+                                style="background-color: rgb(165, 225, 180); width: 24.2424%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="cursor: pointer; padding: 5px 15px;">
+                <div layout="row">
+                    <div class="col-md-6" style="width: 40%;">Recommend-Approve</div>
+                    <div class="col-md-6" style="width: 60%;">
+                        <span class="ng-binding">4</span>
+                        <div class="progress">
+                            <div class="determinate progress-bar" ng-style="{'background-color':'rgb(235, 255, 105)'
+                                            ,'width':((statusObj.STATUS_COUNT/wqAppSum)*100)+'%'}"
+                                style="background-color: rgb(175, 255, 180); width: 12.1212%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="cursor: pointer; padding: 5px 15px;">
+                <div layout="row">
+                    <div class="col-md-6" style="width: 40%;">Approved</div>
+                    <div class="col-md-6" style="width: 60%;">
+                        <span class="ng-binding">2</span>
+                        <div class="progress">
+                            <div class="determinate progress-bar" ng-style="{'background-color':'rgb(235, 255, 105)'
+                                            ,'width':((statusObj.STATUS_COUNT/wqAppSum)*100)+'%'}"
+                                style="background-color: rgb(210, 255, 170); width: 6.06061%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="cursor: pointer; padding: 5px 15px;">
+                <div layout="row">
+                    <div class="col-md-6" style="width: 40%;">Recommend-Reject</div>
+                    <div class="col-md-6" style="width: 60%;">
+                        <span class="ng-binding">1</span>
+                        <div class="progress">
+                            <div class="determinate progress-bar" ng-style="{'background-color':'rgb(235, 255, 105)'
+                                            ,'width':((statusObj.STATUS_COUNT/wqAppSum)*100)+'%'}"
+                                style="background-color: rgb(245, 95, 130); width: 3.0303%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="cursor: pointer; padding: 5px 15px;">
+                <div layout="row">
+                    <div class="col-md-6" style="width: 40%;">Pending</div>
+                    <div class="col-md-6" style="width: 60%;">
+                        <span class="ng-binding">1</span>
+                        <div class="progress">
+                            <div class="determinate progress-bar" ng-style="{'background-color':'rgb(235, 255, 105)'
+                                            ,'width':((statusObj.STATUS_COUNT/wqAppSum)*100)+'%'}"
+                                style="background-color: rgb(235, 255, 105); width: 3.0303%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container datadiv" style="width:100%; margin-top: 20px;">
+            <div class="col-md-12" style="text-align: center; padding: 15px 25px; font-size: 22.5px;">
+                <span> TOP SELLING ASSETS
+                </span>
+            </div>
+            <div class="col-md-12" style="padding:0 20px;">
+                <div layout="row">
+                    <p style="width: 93%;">E260L Sedan</p>
+                    <div class="topassets">8</div>
+                </div>
+            </div>
+            <div class="col-md-12" style="padding:0 20px;">
+                <div layout="row">
+                    <p style="width: 93%;">1.5乐尚手动版（两厢）</p>
+                    <div class="topassets">5</div>
+                </div>
+            </div>
+            <div class="col-md-12" style="padding:0 20px;">
+                <div layout="row">
+                    <p style="width: 93%;">2.0T时尚版</p>
+                    <div class="topassets">5</div>
+                </div>
+            </div>
+            <div class="col-md-12" style="padding:0 20px;">
+                <div layout="row">
+                    <p style="width: 93%;">1.3乐尚手动版（两厢）</p>
+                    <div class="topassets">4</div>
+                </div>
+            </div>
+            <div class="col-md-12" style="padding:0 20px;">
+                <div layout="row">
+                    <p style="width: 93%;">2.0T豪华版</p>
+                    <div class="topassets">3</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container datadiv" style="width:100%; margin-top: 20px;">
+            <div class="col-md-12" style="text-align: center; padding: 15px 25px; font-size: 22.5px;">
+                <span> TOP FINANCIAL PRODUCT
+                </span>
+            </div>
+            <div class="col-md-12" style="padding:0 20px;">
+                <div layout="row">
+                    <p style="width: 93%;">2017_5050_无补贴_12M</p>
+                    <div class="topassets">5</div>
+                </div>
+            </div>
+            <div class="col-md-12" style="padding:0 20px;">
+                <div layout="row">
+                    <p style="width: 93%;">BAIC_5050_有补贴（6%）_12M_个人</p>
+                    <div class="topassets">5</div>
+                </div>
+
+            </div>
+            <div style="padding:0 20px;">
+                <div layout="row">
+                    <p style="width: 93%;">E系列（贴息-个人）</p>
+                    <div class="topassets">5</div>
+                </div>
+            </div>
+            <div style="padding:0 20px;">
+                <div layout="row">
+                    <p style="width: 93%;">BBAC_2016_鹏龙行_5050_12M_个人</p>
+                    <div class="topassets">5</div>
+                </div>
+            </div>
+            <div style="padding:0 20px;">
+                <div layout="row">
+                    <p style="width: 93%;">BBAC_2016_鹏龙行_标准贷款_12-60M_个人</p>
+                    <div class="topassets">5</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="rightSection">
+        <div class="datadiv">
+            <!--The div element for the map -->
+            <div id="mapid"></div>
+        </div>
+    </div>
+</div>

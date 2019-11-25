@@ -36,13 +36,7 @@
 
     <!-- Controllers Scripts -->
     <script src="Controllers/workqueueDashboardCtrl.js"></script>
-
-
-    <!-- Compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
-
-    <!-- Compiled and minified JavaScript -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
+    <script src="Controllers/menuSellingCtrl.js"></script>
 
     <!-- Google Map Api -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -53,22 +47,28 @@
         integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
         crossorigin=""></script>
 
-    <!-- Latest compiled and minified CSS -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
-
-    <!-- jQuery library -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-
-    <!-- Latest compiled JavaScript -->
-    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
-
 </head>
 
 <body style="background-color: #e6e6e6;">
-    <div ng-include="'Templates/header.html'"></div>
+    <!-- Header -->
     <div>
-        <ui-view></ui-view>
+        <header>
+            <div ng-include="'Templates/header.html'"></div>
+        </header>
     </div>
+    <!-- Pages Section -->
+    <div>
+        <section>
+            <div>
+                <ui-view></ui-view>
+            </div>
+
+        </section>
+    </div>
+    <!-- footer -->
+    <footer>
+
+    </footer>
 </body>
 
 </html>

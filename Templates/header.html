@@ -1,80 +1,130 @@
-<div>
-        <header>
-            <div class="header navHeader" style="padding-top: 12px;">
-                <div layout="row" layout-xs="column">
-                    <div flex class="headername">
-                        <a>Credit Application Processing System</a>
-                    </div>
-                    <div flex class="headerIcons">
-                        <div class="maticon headeruser">
-                            <a href="#"><i class="material-icons">person</i></a>
-                        </div>
-                        <div class="maticon">
-                            <a href="#"><i class="material-icons">notifications_none</i></a>
-                        </div>
-                        <div class="maticon">
-                            <a href="#"><i class="material-icons">cached</i></a>
-                        </div>
-                        <div class="maticon">
-                            <a href="#"><i class="material-icons">alarm</i></a>
-                        </div>
-                        <div class="maticon">
-                            <a href="#"><i class="material-icons">mail</i></a>
-                        </div>
-                    </div>
-                </div>
+<div class="header navHeader" style="padding-top: 12px;">
+    <div layout="row" layout-xs="column">
+        <div flex class="headername">
+            <a>Credit Application Processing System</a>
+        </div>
+        <div flex class="headerIcons">
+            <div class="maticon headeruser">
+                <a href="#"><i class="material-icons">person</i></a>
             </div>
-            <div class="header navHeader" id="myHeader" style="padding-bottom: 18px;">
-                <div class="nav">
-                    <div class="navbar">
-                        <ul>
-                            <li>
-                                <div class="">
-                                    <a class="waves-effect waves-light ng-binding" href="#">Upload Disbursement Approval
-                                        Material</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="">
-                                    <a class="waves-effect waves-light" href="#">About CAP</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="">
-                                    <a class="waves-effect waves-light" href="#">User
-                                        Administration</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="">
-                                    <a class="waves-effect waves-light" href="# ">Reports
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="">
-                                    <a class="waves-effect waves-light" href="#">Menu Selling
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="">
-                                    <a class="waves-effect waves-light" href="#">Proposal</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="">
-                                    <a class="waves-effect waves-light" href="#">Work Queue</a>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="active">
-                                    <a class="waves-effect waves-light" href="#">Dashboard</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="maticon">
+                <a href="#"><i class="material-icons">notifications_none</i></a>
             </div>
-        </header>
+            <div class="maticon">
+                <a href="#"><i class="material-icons">cached</i></a>
+            </div>
+            <div class="maticon">
+                <a href="#"><i class="material-icons">alarm</i></a>
+            </div>
+            <div class="maticon">
+                <a href="#"><i class="material-icons">mail</i></a>
+            </div>
+        </div>
     </div>
+</div>
+<div class="header navHeader" id="myHeader" style="padding-bottom: 18px;">
+    <div class="nav">
+        <div class="navbar">
+            <ul>
+                <!-- <li>
+                            <div class="">
+                                <md-button>Upload Disbursement Approval Material</md-button>
+                            </div>
+                        </li> -->
+                <li>
+                    <div class="">
+                        <md-button ui-sref="workqueueDashboard">About CAP</md-button>
+                    </div>
+                </li>
+                <li>
+                    <div class="">
+                        <md-button ui-sref="workqueueDashboard">User Administration</md-button>
+                    </div>
+                </li>
+                <li>
+                    <div class="">
+                        <md-button ui-sref="workqueueDashboard">Reports</md-button>
+                    </div>
+                </li>
+                <li>
+                    <div class="">
+                        <md-menu-bar>
+                            <md-menu>
+                                <md-button aria-label="Open menu" ng-mouseover="$mdMenu.open()">
+                                    Menu Selling
+                                </md-button>
+                                <md-menu-content width="3" ng-mouseleave="$mdMenu.close()">
+                                    <md-menu-item>
+                                        <md-button ui-sref="menuSelling">Create</md-button>
+                                    </md-menu-item>
+                                    <md-menu-item>
+                                        <md-button ui-sref="#">Control Panel</md-button>
+                                    </md-menu-item>
+                                </md-menu-content>
+                            </md-menu>
+                        </md-menu-bar>
+                    </div>
+                </li>
+                <li>
+                    <div class="">
+                        <md-button ui-sref="workqueueDashboard">Proposal</md-button>
+                    </div>
+                </li>
+                <li>
+                    <div class="">
+                        <md-button ui-sref="workqueueDashboard">Work Queue</md-button>
+                    </div>
+                </li>
+                <li>
+                    <div class="active">
+                        <md-button ui-sref="workqueueDashboard">Dashboard</md-button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- ================================= -->
+<!-- <div ng-cloak="">
+        <div>
+          <md-menu>
+            <md-button ng-mouseenter="$mdMenu.open()"> Manu
+            </md-button> 
+            <md-menu-content class="menuitems" width="4" ng-mouseleave="$mdMenu.close()">
+              <md-menu-item ng-repeat="item in [1, 2, 3]">
+                <md-button> 
+                  Option {{item}}
+                </md-button>
+              </md-menu-item>
+            </md-menu-content> 
+          </md-menu>
+        </div>
+      </div> -->
+<!-- <div>
+    <md-menu-bar ng-mouseleave="$mdMenu.close()">
+        <md-menu>
+            <button aria-label="Open menu" ng-mouseover="$mdMenu.open()">
+                Organizations
+            </button>
+            <md-menu-content width="3" ng-mouseleave="$mdMenu.close()">
+                <md-menu-item>
+                    <md-button>
+                        Option1
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button>
+                        Option2
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+    </md-menu-bar>
+</div> -->

@@ -120,7 +120,6 @@ ul li {
 }
 
 section {
-    padding: 50px 25px;
     margin: 0 auto;
     width: 90%;
 }
@@ -255,7 +254,6 @@ label .waves-effect {
     width: 58.3333333333%;
     margin: 20px;
 }
-
 
 @media only screen and (max-width: 635px) {
     .datadiv {
