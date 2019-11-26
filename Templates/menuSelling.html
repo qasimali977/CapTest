@@ -1,3 +1,25 @@
-<div>
-    <h2> Create</h2>
+<div class="mainSection">
+    <div layout="row" layout-sm="column">
+        <md-button class="md-warn md-raised btn-small" ng-click="addTab('Tabs')">New Option</md-button>
+        <md-button class="md-warn md-raised btn-small">Save</md-button>
+        <md-button class="md-warn md-raised btn-small">Convert</md-button>
+
+    </div>
+    <div layout="column" ng-cloak="">
+        <md-tabs md-selected="selectedIndex" md-border-bottom="" md-autoselect="" md-swipe-content="" md-no-ink-bar="">
+            <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled">
+                <md-tab-label>
+                    <div style="font-size: 25px; padding: 5px;">CN¥0.00</div>
+                    <div style="font-size: 12px;">Quotation No.. </div>
+                </md-tab-label>
+                <md-tab-body >
+                    <md-content style="width: 300px;">
+                        <div>ABCD</div>
+                        <div>ABCD</div>
+                        <div>ABCD</div>
+                    </md-content>
+                </md-tab-body>
+            </md-tab>
+        </md-tabs>
+    </div>
 </div>

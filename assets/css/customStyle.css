@@ -255,6 +255,65 @@ label .waves-effect {
     margin: 20px;
 }
 
+/* Menu Selling */
+.md-button.md-raised {
+    color: #fff !important;
+    background-color: #8f0c2c !important;
+}
+
+.mainSection {
+    margin-top: 1px;
+    padding: 25px;
+    width: 100%;
+    margin: 15px 0;
+    position: relative;
+}
+
+.md-button {
+    min-width: 105px !important;
+    min-height: 43px !important;
+    line-height: 43px !important;
+    margin-left: 0px !important;
+    margin-right: 4px !important;
+}
+
+.contentSection {
+    margin-top: 5px;
+}
+
+/* mat tabs */
+
+/* md-tabs md-ink-bar {
+    background: none !important;
+} */
+
+md-tab-item {
+    width: 300px;
+    max-width: 300px !important;
+    color: #fff !important;
+    background-color: #8f0c2c !important;
+    margin-right: 10px;
+    height: 70px !important;
+}
+
+md-tabs-wrapper {
+    border-width: 0 !important;
+}
+
+.md-tab {
+    padding: 0 !important;
+}
+md-tabs-canvas {
+
+    margin-top: 5px;
+    height: 70px !important;
+}
+
+md-tabs-content-wrapper {
+    margin-top: 40px;
+}
+/* ========================== */
+
 @media only screen and (max-width: 635px) {
     .datadiv {
         width: 100% !important;
