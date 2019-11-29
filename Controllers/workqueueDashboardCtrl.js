@@ -1,6 +1,23 @@
-app.controller("workqueueDashboardCtrl", function($scope) {
+app.controller("workqueueDashboardCtrl", function($scope, $filter) {
   $scope.searchObj = {};
   $scope.searchObj.days = 1;
+
+  $scope.searchduration = [
+    {
+      id: 1,
+      duration: "Last Three Months"
+    },
+    {
+      id: 2,
+      duration: "Last Six Months"
+    },
+    {
+      id: 3,
+      duration: "Last"
+    }
+  ];
+  $scope.selectedId = 3;
+
 
   // Map Api
   var mymap = L.map("mapid").setView([51.505, -0.09], 13);

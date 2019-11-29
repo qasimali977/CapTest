@@ -1,25 +1,153 @@
 <div class="mainSection">
-    <div layout="row" layout-sm="column">
-        <md-button class="md-warn md-raised btn-small" ng-click="addTab('Tabs')">New Option</md-button>
+    <div layout="row" layout-sm="column" style="margin-bottom: 4px;">
+        <md-button class="md-warn md-raised btn-small" ng-click="addTab()">New Option</md-button>
         <md-button class="md-warn md-raised btn-small">Save</md-button>
         <md-button class="md-warn md-raised btn-small">Convert</md-button>
-
     </div>
-    <div layout="column" ng-cloak="">
-        <md-tabs md-selected="selectedIndex" md-border-bottom="" md-autoselect="" md-swipe-content="" md-no-ink-bar="">
-            <md-tab ng-repeat="tab in tabs" ng-disabled="tab.disabled">
-                <md-tab-label>
-                    <div style="font-size: 25px; padding: 5px;">CN¥0.00</div>
-                    <div style="font-size: 12px;">Quotation No.. </div>
-                </md-tab-label>
-                <md-tab-body >
-                    <md-content style="width: 300px;">
-                        <div>ABCD</div>
-                        <div>ABCD</div>
-                        <div>ABCD</div>
-                    </md-content>
-                </md-tab-body>
-            </md-tab>
-        </md-tabs>
+    <div ng-repeat="x in quotationArr" style="width: 300px;float: left; margin-right: 10px;">
+        <div class="quotationHeader">
+            <div layout="row" layout-align="center">
+                <div class="quotHeaderValue">CN¥0.00</div>
+                <md-menu>
+                    <md-button aria-label="Open demo menu" class="md-icon-button menubtn"
+                        ng-click="$mdOpenMenu($event)">
+                        <i class="material-icons">more_vert</i>
+                    </md-button>
+                    <md-menu-content width="4">
+                        <md-menu-item ng-repeat="item in [1, 2, 3]">
+                            <md-button ng-click="ctrl.announceClick($index)"> <span md-menu-align-target>Option</span>
+                                {{item}} </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+            <div style="font-size: 13px;font-weight: bold">Quotation No.. </div>
+        </div>
+        <!-- General Tab -->
+        <div style="border-style: solid;border-width:1px;border-color: darkgray;">
+            <md-content style="text-align: center;">
+                <div class="quotationSubHeader">General</div>
+                <div>
+                    <label class="quotationLable">Application Type*</label>
+                    <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
+                        <md-optgroup label="items">
+                            <md-option ng-repeat="item in items" ng-value="item">{{item}}</md-option>
+                        </md-optgroup>
+                    </md-select>
+                </div>
+                <div>
+                    <label class="quotationLable">Dealer*</label>
+                    <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
+                        <md-optgroup label="items">
+                            <md-option ng-repeat="item in items" ng-value="item">{{item}}</md-option>
+                        </md-optgroup>
+                    </md-select>
+                </div>
+                <div style="height: 48px;">
+                    <md-input-container>
+                        <label class="quotationLable">Name (Chinese)*</label>
+                        <input ng-model="user.address2">
+                    </md-input-container>
+                </div>
+            </md-content>
+
+            <!-- Asset Information Tab -->
+            <md-content style="text-align: center;">
+                <div class="quotationSubHeader">Asset Information</div>
+                <div layout="row">
+                    <md-input-container style="width: 90%;">
+                        <label class="quotationLable">Make/Manufacturer*</label>
+                        <input ng-model="user.address3" disabled>
+                    </md-input-container>
+                    <div style="border-bottom-style: dashed;border-width:1px;border-color: darkgray;">
+                        <md-button aria-label="Search Maker" class="md-icon-button searchbtn">
+                            <i class="material-icons">search</i>
+                        </md-button>
+                    </div>
+                </div>
+                <div>
+                    <md-input-container>
+                        <label class="quotationLable">Model*</label>
+                        <input ng-model="user.address4" style="border-style: dashed;" disabled>
+                    </md-input-container>
+                </div>
+                <div>
+                    <div
+                        style="width: 50%; float: left; border-right-style: solid;border-width:1px;border-color: darkgray;">
+                        <md-input-container>
+                            <label class="quotationLable">Asset Price*</label>
+                            <input ng-model="user.address5" style="border-style: dashed;" disabled>
+                        </md-input-container>
+                    </div>
+                    <div>
+                        <label class="quotationLable">Asset Condition*</label>
+                        <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
+                            <md-optgroup label="items">
+                                <md-option ng-repeat="item in items" ng-value="item">{{item}}</md-option>
+                            </md-optgroup>
+                        </md-select>
+                    </div>
+                </div>
+            </md-content>
+
+            <!-- Financial Terms Tab -->
+            <md-content style="text-align: center;">
+                <div class="quotationSubHeader">Financial Terms</div>
+                <div>
+                    <label class="quotationLable">Product Group*</label>
+                    <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
+                        <md-optgroup label="items">
+                            <md-option ng-repeat="item in items" ng-value="item">{{item}}</md-option>
+                        </md-optgroup>
+                    </md-select>
+                </div>
+                <div>
+                    <label class="quotationLable">Product Type*</label>
+                    <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
+                        <md-optgroup label="items">
+                            <md-option ng-repeat="item in items" ng-value="item">{{item}}</md-option>
+                        </md-optgroup>
+                    </md-select>
+                </div>
+                <div>
+                    <div>
+                        <md-input-container style="width: 50%; float: left;">
+                            <label class="quotationLable">Term (Month)*</label>
+                            <input ng-model=" user.address5" style="border-style: dashed;" disabled>
+                        </md-input-container>
+                    </div>
+                    <div>
+                        <md-input-container style="width: 50%; float: right;">
+                            <label class="quotationLable">RV / Balloon Amount*</label>
+                            <input ng-model="user.address5" style="border-style: dashed;" disabled>
+                        </md-input-container>
+                    </div>
+                </div>
+                <div>
+                    <md-input-container>
+                        <label class="quotationLable">Interest Rate %*</label>
+                        <input ng-model="user.address4" style="border-style: dashed;" disabled>
+                    </md-input-container>
+                </div>
+                <div>
+                    <md-input-container style="width: 50%; float: left;">
+                        <label class="quotationLable">Down Payment*</label>
+                        <input ng-model="user.address5" style="border-style: dashed;" disabled>
+                    </md-input-container>
+                    <md-input-container style="width: 50%; float: left;">
+                        <label class="quotationLable">Financed Amount*</label>
+                        <input ng-model="user.address5" style="border-style: dashed;" disabled>
+                    </md-input-container>
+                </div>
+                <div>
+                    <label class="quotationLable">Payment Frequency*</label>
+                    <md-select ng-model="selectedItem" md-selected-text="getSelectedText()">
+                        <md-optgroup label="items">
+                            <md-option ng-repeat="item in items" ng-value="item">{{item}}</md-option>
+                        </md-optgroup>
+                    </md-select>
+                </div>
+            </md-content>
+        </div>
     </div>
 </div>

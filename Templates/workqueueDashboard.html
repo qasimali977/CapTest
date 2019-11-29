@@ -1,42 +1,29 @@
-<div class="searchOpt collapsible-header ">
-    <div>
-        <div class="left">Search Options</div>
+<div class="searchOpt">
+    <div class="left">Search Options</div>
+    <div class="datadiv">
+        <md-content style="border-radius: 5px;" layout-padding layout="row" layout-xs="column">
+            <div flex flex-xs layout="row" layout-xs="column" layout-sm="column">
+                <div>
+                    <md-radio-group ng-model="selectedId" layout="row">
+                        <div ng-repeat='period in searchduration'>
+                            <md-radio-button ng-value="period.id" style="font-size: small; padding: 10px 20px">
+                                {{period.duration}}
+                            </md-radio-button>
+                        </div>
+                    </md-radio-group>
+                </div>
+                <div>
+                    <md-input-container>
+                        <label class="quotationLable">Days</label>
+                        <input ng-model="user.address4">
+                    </md-input-container>
+                </div>
+            </div>
+            <div flex="22" flex-xs>
+                <md-button class="md-warn md-raised btn-small">Refresh WQ</md-button>
+            </div>
+        </md-content>
     </div>
-</div>
-<div class="datadiv">
-    <form>
-        <div layout="row" layout-xs="column" class="radiobox">
-            <div style="margin-top: 20px;">
-                <label class="lables">
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span>Last Three Months</span>
-                </label>
-            </div>
-            <div style="margin-top: 20px;">
-                <label>
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span>Last Six Months</span>
-                </label>
-            </div>
-            <div style="margin-top: 20px;">
-                <label>
-                    <input class="with-gap" name="group1" type="radio" />
-                    <span>Last</span>
-                </label>
-            </div>
-            <div>
-                <label style="padding: 10px !important;">
-                    <b><span style="color: #8f0c2c;">Days</span></b>
-                    <input type="text" class="inputField" name="days" ng-model="searchObj.days">
-                </label>
-            </div>
-            <div style="margin: 20px;">
-                <label>
-                    <a class="waves-effect waves-light btn">Refresh WQ</a>
-                </label>
-            </div>
-        </div>
-    </form>
 </div>
 
 <div layout="row" layout-xs="column" style="width: 100%;">
